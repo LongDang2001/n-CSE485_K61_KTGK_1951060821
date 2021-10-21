@@ -14,7 +14,7 @@
 <body>
 
     <br> <br>
-    <a href="addEmployee.php" class="btn btn-success"><i class="fas fa-user-plus"></i> Thêm Thuốc</a>
+    <a href="addThuoc.php" class="btn btn-success"><i class="fas fa-user-plus"></i> Thêm Thuốc</a>
     <table class="table">
         <thead>
             <tr>
@@ -58,8 +58,8 @@
                     echo '<td>' . $row['expiration_date'] . '</td>';
                     echo '<td>' . $row['place'] . '</td>';
                     echo '<td>' . $row['quantity'] . '</td>';
-                    echo '<td><a href="editThuoc.php?id=' . $row['id'] . '">  Sua NV</a> </td>';
-                    echo '<td><a href="deleteThuoc.php?id=' . $row['id'] . '"> Xoa NV </a> </td>';
+                    echo '<td><a href="editThuoc.php?id=' . $row['id'] . '">  Sua Thuoc </a> </td>';
+                    echo '<td><a href="deleteThuoc.php?id=' . $row['id'] . '"> Xoa Thuoc </a> </td>';
 
                     
                     echo '</tr>';
@@ -71,44 +71,6 @@
         </tbody>
     </table>
     <br> <br>
-
-    <main class="container">
-        <h2>Thêm thông tin danh bạ Nhân viên</h2>
-        <form action="process-add-employee.php" method="POST">
-            <div class="form-group row">
-                <label for="empName" class="col-sm-2 col-form-label">Tên nhân viên:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="empName" name="empName">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="empPosition" class="col-sm-2 col-form-label">Chức vụ</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="empPosition" name="empPosition">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="empEmail" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="empEmail" name="empEmail">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="empMobile" class="col-sm-2 col-form-label">Số di động</label>
-                <div class="col-sm-10">
-                    <input type="tel" class="form-control" id="empMobile" name="empMobile">
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="empMobile" class="col-sm-2 col-form-label"></label>
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-success">Lưu lại</button>
-
-                </div>
-            </div>
-        </form>
-    </main>
 
 
 

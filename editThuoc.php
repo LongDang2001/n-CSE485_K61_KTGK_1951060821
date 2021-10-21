@@ -3,7 +3,13 @@
 
     <?php
     // ket noi toi server de hien thi du lieu: 
-    include 'config.php';
+    
+    $conn = mysqli_connect('localhost', 'root', '', 'QuanLyThuoc');
+    if (!$conn) {
+        die("Không thể kết nối");
+    }
+
+
     $id = $_GET['id']; // nho la dau ngoac vuong 
 
     $sql = "SELECT * FROM drugs where id = $id";
@@ -133,7 +139,7 @@ if (isset($_POST['submit'])) {
         expiration_date = '$expiration_date',
         place= '$place',
         quantity = '$quantity' ";
-       
+
 
     $resuld = mysqli_query($conn, $sql);
 
